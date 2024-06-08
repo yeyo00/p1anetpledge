@@ -7,37 +7,53 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
         }
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .row {
             display: flex;
-            width: 100%;
             justify-content: center;
+            margin: 10px 0;
         }
         .box {
             border: 2px solid black;
             padding: 20px;
             margin: 10px;
             text-align: center;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .large {
+        .box.large {
             width: 80%;
             height: 200px;
         }
-        .medium {
+        .box.medium {
             width: 40%;
             height: 150px;
         }
-        a {
+        .box a {
+            display: block;
+            width: 100%;
+            height: 100%;
             text-decoration: none;
-            color: black;
+            color: inherit;
+            line-height: 150px;
         }
-        a:hover {
+        .box.large a {
+            line-height: 200px;
+        }
+        .box:hover {
+            background-color: #e0e0e0;
             color: blue;
         }
     </style>
@@ -47,17 +63,17 @@
         <h1>planetpledge</h1>
         <h2>Latest Issue</h2>
         <div class="row">
-            <!-- https://www.greenpeace.org/korea/ -->
+            <!-- greenpeace 링크 -->
             <div class="box large">
                 <a href="https://www.greenpeace.org" target="_blank">greenpeace</a>
             </div>
         </div>
         <div class="row">
-            <!-- https://unfccc.int/ -->
+            <!-- UNFCCC 링크 -->
             <div class="box medium">
                 <a href="https://unfccc.int" target="_blank">unfccc.int</a>
             </div>
-            <!-- https://www.hkbs.co.kr/ -->
+            <!-- HKBS 링크 -->
             <div class="box medium">
                 <a href="http://www.hkbs.co.kr" target="_blank">hkbs.co.kr</a>
             </div>
